@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="application.css">
+    <script type="module" src="firebase.js" defer></script>
+</head>
+<body>
+  <div class="top-s">Hello</div>
+  <nav>
+      <div class="Logo">
+          <a href="home.html">
+              <img src="./z-images/MTU.webp" width="93px" height="64px">
+          </a>
+          <p>MOUNTAIN TOP<BR> UNIVERSITY</p>
+      </div>
+  </nav>
+
+  <div class="container">
+
+    <h1>Exeat Application Form</h1>
+        
+        <!-- Interactive Exeat Form -->
+    <form id="contactForm" action="">
+      <input type="text" placeholder="Matric Number" id="matricNo" required />
+      <input type="email" placeholder="Parent/Guardian's Email Address" required id="emailID"/>
+      <textarea placeholder="State your reason for the exeat request" rows="4" id="message" required ></textarea>
+      <button type="submit" value="Submit Request" >Submit</button>
+    </form>
+  </div>
+
+    <footer>
+      &copy; MTU 2025. All rights reserved.
+    </footer>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+        <!-- Optional JavaScript for additional interactivity
+      <script type="module">
+        import { submitExeatForm } from "./firebase.js";
+
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Collect form data
+          const formData = {
+            matric_number: form.querySelector('input[placeholder="Matric Number"]').value,
+            guardian_email: form.querySelector('input[placeholder="Parent or Guardian\'s Email Address"]').value,
+            reason: form.querySelector('textarea[placeholder="State your reason for the exeat request"]').value,
+          };
+
+          // Submit form data to Firebase
+          submitExeatForm(formData).then(() => {
+            form.reset();
+            window.location.href = "home.html"; // Navigate to the Home Page
+          });
+        });
+      </script> -->
+</html>
